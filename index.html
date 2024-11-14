@@ -18,7 +18,8 @@
                 <img src="Logo.png" class="logo" alt="Logo" width="200px">
                 
                 <!-- Hamburger menu icon -->
-                <i class="fa-solid fa-bars menu-toggle"></i>
+                 <div class="menubar">
+                <i class="fa-solid fa-bars menu-toggle"></i></div>
                 
                 <ul id="menu">
                     <li><a href="#header">Home</a></li>
@@ -27,7 +28,7 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <!-- Close menu icon -->
-                    <li><i class="fa-solid fa-circle-xmark close-menu" onclick="closemenu()"></i></li>
+                    <li class="close_button"><i class="fa-solid fa-circle-xmark close-menu"></i></li>
                 </ul>
             </nav>
                 
@@ -41,14 +42,7 @@
     
     <!-- Add your About, Services, Portfolio, Contact sections here -->
     <!-- Script to handle menu opening and closing -->
-    <script>
-        function openmenu() {
-            document.getElementById("sidemenu").style.display = "block";
-        }
-        function closemenu() {
-            document.getElementById("sidemenu").style.display = "none";
-        }
-    </script>
+
 
     <!-- About Section -->
     <div id="about">
@@ -294,18 +288,16 @@
   <script>
 // Toggle the menu visibility when the hamburger icon is clicked
 const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.getElementById('menu');
 const closeMenu = document.querySelector('.close-menu');
 
 menuToggle.addEventListener('click', function() {
-    document.body.classList.toggle('menu-active');
+    document.body.classList.toggle('menu-active'); // Toggles the active class to show/hide the menu
 });
 
 // Close the menu when the close icon is clicked
 closeMenu.addEventListener('click', function() {
-    document.body.classList.remove('menu-active');
+    document.body.classList.remove('menu-active'); // Removes the active class to hide the menu
 });
-
 
   </script>
 </body>
